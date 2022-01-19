@@ -1,8 +1,8 @@
-import { Itrack } from "./track";
+import { Track } from "./track";
 
-export interface Ialbum{
+export interface Album{
     name: string,
     releaseDate: string,
     coverImage: string,
-    tracks: Itrack[]
+    tracks: Track[]
 }
