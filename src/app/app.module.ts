@@ -1,12 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { ProductDescriptionComponent } from './product-description/product-description.component';
-import { ProductService } from './product.service';
+
+import { ProductService } from './product.service'
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { ProductService } from './product.service';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule,
+    HttpModule,
 
   ],
   providers: [ProductService],
