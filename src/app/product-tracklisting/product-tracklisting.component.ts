@@ -5,16 +5,15 @@ import { ProductService } from "app/product.service";
 @Component({
     selector: 'app-product-tracklisting',
     templateUrl: './product-tracklisting.html',
-    styleUrls: './product-tracklisting.css'
+    styleUrls: ['./product-tracklisting.css']
 })
 
-export class ProductTracklisting implements OnInit {
+export class ProductTracklistingComponent implements OnInit {
 
     albumInfo: Album;
+    constructor(private _productService: ProductService) {}
 
-    constructor(private _productService: ProductService){}
-
-    ngOnInit(): void {
-        this._productService.getAlbum(1).subscribe(response=> this.albumInfo = response)
+    ngOnInit(){
+        this._productService.getAlbum(1).subscribe(response => this.albumInfo = response)
     }
 }
